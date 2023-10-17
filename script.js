@@ -727,17 +727,17 @@ async function checkWeather(){
   let temp = Number(data.main.temp.toFixed(1));
   document.querySelector(".temperature").innerHTML = temp + "°c";
   if(data.weather[0].main == "Clouds"){
-    weatherIcon.src = "images/clouds.png";  
+    weatherIcon.src = "clouds.png";  
   } else if(data.weather[0].main == "Clear"){
-    weatherIcon.src = "images/clear.png";  
+    weatherIcon.src = "clear.png";  
   } else if(data.weather[0].main == "Rain"){
-    weatherIcon.src = "images/rain.png";  
+    weatherIcon.src = "rain.png";  
   } else if(data.weather[0].main == "Drizzle"){
-    weatherIcon.src = "images/drizzle.png";  
+    weatherIcon.src = "drizzle.png";  
   } else if(data.weather[0].main == "Mist"){
-    weatherIcon.src = "images/mist.png";  
+    weatherIcon.src = "mist.png";  
   } else if(data.weather[0].main == "Snow"){
-    weatherIcon.src = "images/snow.png";  
+    weatherIcon.src = "snow.png";  
   }
   } catch {
     console.log("Couldn't connect to server")
@@ -747,32 +747,14 @@ setInterval(checkWeather, 30*1000)
 
 
 //test piececes
-builds.push(new Build("12345-67812", "Tray-Pop", "0", "115", "10/21 10:32"))
+/*builds.push(new Build("12345-67812", "Tray-Pop", "0", "115", "10/21 10:32"))
 tasks.push(new Task(canvas.width/2 - 150, borderSize*2, canvas.width/4, canvas.height*7/16, "#D1CFCE" , "Tray-Pop"))
 people.push(new Person(canvas.width/2 - name.length/2*22 + 27, 100, 50, "lightblue", "Michael"))
-people.push(new Person(canvas.width/2 - name.length/2*22 + 27, 200, 50, "red", "順子"))
-/*people.push(new Person(canvas.width/2 - name.length/2*22 + 27, 200, 50, "red", "1245"))
-people.push(new Person(canvas.width/2 - name.length/2*22 + 27, 200, 50, "red", "12"))
-people.push(new Person(canvas.width/2 - name.length/2*22 + 27, 200, 50, "red", "132"))
-people.push(new Person(canvas.width/2 - name.length/2*22 + 27, 200, 50, "red", "dfb"))
-people.push(new Person(canvas.width/2 - name.length/2*22 + 27, 200, 50, "red", "sdv"))*/
+people.push(new Person(canvas.width/2 - name.length/2*22 + 27, 200, 50, "red", "順子"))*/
 
 //Initialize
 drawAreas();
 
 
-/* 
-Code to make everyone edit the same page
-
-const socket = new WebSocket("ws://your-server-url");
-
-// (in function) socket.send(JSON.stringify({ x, y }));
-
-socket.onmessage = (event) => {
-  const data = JSON.parse(event.data);
-  // Draw on the canvas based on data received from other users
-  // ctx.lineTo(data.x, data.y);
-  // ctx.stroke();
-};
 
 */
